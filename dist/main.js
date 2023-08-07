@@ -8,11 +8,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { getCharacters } from "./utils/API.js";
+import { getEpisodes } from "./utils/API.js";
 window.addEventListener("load", init);
 function init() {
     return __awaiter(this, void 0, void 0, function* () {
-        const characterList = document.querySelector('#characterList');
+        const characterList = document.getElementById("CharacterList");
         const characters = yield getCharacters();
+        const episodes = yield getEpisodes();
         characters.forEach((char) => {
             const characterCard = document.createElement('div');
             const characterCardTitle = document.createElement('h3');
@@ -23,8 +25,15 @@ function init() {
             characterImg.alt = `${char.name} Image`;
             characterCard.appendChild(characterCardTitle);
             characterCard.appendChild(characterImg);
+            characterCard.addEventListener("click", sayAlt);
             characterList.appendChild(characterCard);
-            // console.log(char);        
+            console.log(char.image);
         });
+        // function sayAlt(event:Event){
+        //     // consoel log event.target.alt
+        // }
+        function sayAlt() {
+            // consoel log this.alt
+        }
     });
 }

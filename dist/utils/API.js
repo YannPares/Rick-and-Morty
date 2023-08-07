@@ -7,11 +7,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const url = 'rickandmortyapi.com/api';
+const url = 'https://rickandmortyapi.com/api';
 const urlChar = `${url}/character`;
+const urlEp = `${url}/episode`;
 export function getCharacters() {
     return __awaiter(this, void 0, void 0, function* () {
-        const response = yield fetch(url);
+        const response = yield fetch(urlChar);
+        const data = yield response.json();
+        return data.results;
+    });
+}
+export function getEpisodes() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const response = yield fetch(urlEp);
         const data = yield response.json();
         return data.results;
     });

@@ -1,10 +1,14 @@
 import { getCharacters } from "./utils/API.js";
+import { getEpisodes } from "./utils/API.js";
+
+
 
 window.addEventListener("load", init);
 
 async function init(){
-    const characterList = document.querySelector('#characterList');
+    const characterList = document.getElementById("CharacterList");
     const characters = await getCharacters();
+    const episodes = await getEpisodes();
 
     characters.forEach((char) => {
         const characterCard = document.createElement('div');
@@ -17,10 +21,17 @@ async function init(){
 
         characterCard.appendChild(characterCardTitle);
         characterCard.appendChild(characterImg);
-
+        characterCard.addEventListener("click", sayAlt);
         characterList!.appendChild(characterCard);
         
-        // console.log(char);        
+        console.log(char.image);        
     });
+    // function sayAlt(event:Event){
+    //     // consoel log event.target.alt
+    // }
+    function sayAlt(this: HTMLIFrameElement){
+        // consoel log this.alt
+    }
+
 }
 
