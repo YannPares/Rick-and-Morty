@@ -1,15 +1,17 @@
-import { getCharacters } from "./utils/API.js";
-import { getEpisodes } from "./utils/API.js";
+import { getCharacters,getEpisodes, getLocations } from "./utils/API.js";
+
 
 
 
 window.addEventListener("load", init);
 
 async function init(){
-    const characterList = document.getElementById("CharacterList");
-    const EpisodeList = document.getElementById("EpisodeList");
+    const characterList = document.querySelector("#CharacterList");
+    const EpisodeList = document.querySelector("#EpisodeList");
+    const LocationList = document.querySelector("#LocationList");
     const characters = await getCharacters();
     const episodes = await getEpisodes();
+    const locations = await getLocations();
 
     characters.forEach((char) => {
         const characterCard = document.createElement('div');
@@ -19,13 +21,17 @@ async function init(){
         const characterImg = document.createElement("img")
         characterImg.src = char.image;
         characterImg.alt = `${char.name} Image`;
+        
         characterCard.appendChild(characterCardTitle);
         characterCard.appendChild(characterImg);
         characterCard.addEventListener("click", sayAlt);
+        // characterCard.setAttribute('class', 'card')
         characterList!.appendChild(characterCard);
-        console.log(char.image);        
+        // console.log(char.image);        
     });
-
+    function sayAlt(this: HTMLIFrameElement){
+            // console.log(this.alt);
+        }
     episodes.forEach((episode) => {
         const episodeBlock = document.createElement('div');
         const episodeBlockTitle = document.createElement('h3');
@@ -33,12 +39,19 @@ async function init(){
         episodeBlock.appendChild(episodeBlockTitle);
         episodeBlockTitle.appendChild(episodeName);
         EpisodeList!.appendChild(episodeBlock);
-        console.log(episode.name)
+        // console.log(episode.name)
+    });
+    locations.forEach((location) => {
+        const locationBlock = document.createElement('ul');
+        const locationBlockTitle = document.createElement('li');
+        const locationName = document.createTextNode(location.name);
+        locationBlock.appendChild(locationBlockTitle);
+        locationBlockTitle.appendChild(locationName);
+        LocationList!.appendChild(locationBlock);
+        // console.log(episode.name)
     });
    
-    function sayAlt(this: HTMLIFrameElement){
-        // console.log(this.alt);
-    }
+  
 
 }
 

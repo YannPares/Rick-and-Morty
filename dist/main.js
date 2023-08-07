@@ -7,15 +7,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { getCharacters } from "./utils/API.js";
-import { getEpisodes } from "./utils/API.js";
+import { getCharacters, getEpisodes, getLocations } from "./utils/API.js";
 window.addEventListener("load", init);
 function init() {
     return __awaiter(this, void 0, void 0, function* () {
-        const characterList = document.getElementById("CharacterList");
-        const EpisodeList = document.getElementById("EpisodeList");
+        const characterList = document.querySelector("#CharacterList");
+        const EpisodeList = document.querySelector("#EpisodeList");
+        const LocationList = document.querySelector("#LocationList");
         const characters = yield getCharacters();
         const episodes = yield getEpisodes();
+        const locations = yield getLocations();
         characters.forEach((char) => {
             const characterCard = document.createElement('div');
             const characterCardTitle = document.createElement('h3');
@@ -27,9 +28,13 @@ function init() {
             characterCard.appendChild(characterCardTitle);
             characterCard.appendChild(characterImg);
             characterCard.addEventListener("click", sayAlt);
+            // characterCard.setAttribute('class', 'card')
             characterList.appendChild(characterCard);
-            console.log(char.image);
+            // console.log(char.image);        
         });
+        function sayAlt() {
+            // console.log(this.alt);
+        }
         episodes.forEach((episode) => {
             const episodeBlock = document.createElement('div');
             const episodeBlockTitle = document.createElement('h3');
@@ -37,10 +42,16 @@ function init() {
             episodeBlock.appendChild(episodeBlockTitle);
             episodeBlockTitle.appendChild(episodeName);
             EpisodeList.appendChild(episodeBlock);
-            console.log(episode.name);
+            // console.log(episode.name)
         });
-        function sayAlt() {
-            // console.log(this.alt);
-        }
+        locations.forEach((location) => {
+            const locationBlock = document.createElement('ul');
+            const locationBlockTitle = document.createElement('li');
+            const locationName = document.createTextNode(location.name);
+            locationBlock.appendChild(locationBlockTitle);
+            locationBlockTitle.appendChild(locationName);
+            LocationList.appendChild(locationBlock);
+            // console.log(episode.name)
+        });
     });
 }
