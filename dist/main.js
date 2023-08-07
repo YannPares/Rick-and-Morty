@@ -13,6 +13,7 @@ window.addEventListener("load", init);
 function init() {
     return __awaiter(this, void 0, void 0, function* () {
         const characterList = document.getElementById("CharacterList");
+        const EpisodeList = document.getElementById("EpisodeList");
         const characters = yield getCharacters();
         const episodes = yield getEpisodes();
         characters.forEach((char) => {
@@ -29,11 +30,17 @@ function init() {
             characterList.appendChild(characterCard);
             console.log(char.image);
         });
-        // function sayAlt(event:Event){
-        //     // consoel log event.target.alt
-        // }
+        episodes.forEach((episode) => {
+            const episodeBlock = document.createElement('div');
+            const episodeBlockTitle = document.createElement('h3');
+            const episodeName = document.createTextNode(episode.name);
+            episodeBlock.appendChild(episodeBlockTitle);
+            episodeBlockTitle.appendChild(episodeName);
+            EpisodeList.appendChild(episodeBlock);
+            console.log(episode.name);
+        });
         function sayAlt() {
-            // consoel log this.alt
+            // console.log(this.alt);
         }
     });
 }

@@ -7,6 +7,7 @@ window.addEventListener("load", init);
 
 async function init(){
     const characterList = document.getElementById("CharacterList");
+    const EpisodeList = document.getElementById("EpisodeList");
     const characters = await getCharacters();
     const episodes = await getEpisodes();
 
@@ -18,19 +19,25 @@ async function init(){
         const characterImg = document.createElement("img")
         characterImg.src = char.image;
         characterImg.alt = `${char.name} Image`;
-
         characterCard.appendChild(characterCardTitle);
         characterCard.appendChild(characterImg);
         characterCard.addEventListener("click", sayAlt);
         characterList!.appendChild(characterCard);
-        
         console.log(char.image);        
     });
-    // function sayAlt(event:Event){
-    //     // consoel log event.target.alt
-    // }
+
+    episodes.forEach((episode) => {
+        const episodeBlock = document.createElement('div');
+        const episodeBlockTitle = document.createElement('h3');
+        const episodeName = document.createTextNode(episode.name);
+        episodeBlock.appendChild(episodeBlockTitle);
+        episodeBlockTitle.appendChild(episodeName);
+        EpisodeList!.appendChild(episodeBlock);
+        console.log(episode.name)
+    });
+   
     function sayAlt(this: HTMLIFrameElement){
-        // consoel log this.alt
+        // console.log(this.alt);
     }
 
 }

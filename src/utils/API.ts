@@ -13,5 +13,4 @@ export async function getEpisodes(): Promise<Episodes[]>{
     const response = await fetch(urlEp);
     const data = await response.json();
     return data.results;
-
 }
