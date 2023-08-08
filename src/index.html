@@ -18,8 +18,12 @@ errores un toaster-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="/dist/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/src/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -34,21 +38,107 @@ errores un toaster-->
         <img src="https://github.com/YannPares/Rick-and-Morty/blob/main/src/assets/Rick_and_Morty_title_card_(cropped).png?raw=true" 
         alt="mainTitleImg"
         width="100%">
-        <button>HOLA</button>
+        <!-- <button class="menu-btn btn btn-secondary "><h2>EPISODES</h2></button>
+        <button class="menu-btn btn btn-secondary "><h2>CHARACTERS</h2></button> -->
+       
     </div>
 
-    <nav class="sidebar" id="EpisodeList"> <h2>Episodes</h2> 
+    <nav class="sidebar text-center" id="EpisodeList">  
+        <h2>Episodes</h2>
     </nav>
 
-    <main class="container">
+    <main class="container text-center">
     <section>
         <h2>Characters</h2>
-        <div class="card-group col-md-12 g-0 card-flex" id="CharacterList"></div>
+        <div class="card-group" id="CharacterList"></div>
+
         <h2>Locations</h2>
         <div  id="LocationList"></div>
-       
-
-
+    </section>
+    <section>
+        <div class="modal fade" id="myModalChar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header" id="modalHeaderChar">
+                
+                </div>
+                <div id="modalBodyChar">
+                    <span id="charImage">
+                    </span><br>
+                    <span>ID: </span>
+                    <span id="charID">
+                    </span><br>
+                    <span>NAME: </span>
+                    <span id="charName">
+                    </span><br>
+                    <span>STATUS: </span>
+                    <span id="charStatus">
+                    </span><br>
+                    <span>SPECIES: </span>
+                    <span id="charSpecie"> 
+                    </span><br>
+                    <span>TYPE: </span>
+                    <span id="charType">
+                    </span><br>
+                    <span>GENDER: </span>
+                    <span id="charGender">
+                    </span><br>
+                    <span>ORIGIN: </span>
+                    <span id="charOrigin">
+                    </span><br>
+                    <span>LOCATION: </span>
+                    <span id="charLocation">
+                    </span><br>
+                    <span>EPISODE: </span>
+                    <span id="charEP">
+                    </span><br>
+                    <span>URL: </span>
+                    <span id="charUrl">
+                    </span><br>
+                    <span>CREATED: </span>
+                    <span id="charCreate">
+                    </span><br>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <section>
+        <div class="modal fade" id="myModalEp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header" id="modalHeaderEp">
+                
+                </div>
+                <div id="modalBodyEp">
+                    <span>ID: </span>
+                    <span id="epID">
+                    </span><br>
+                    <span>Name: </span>
+                    <span id="epName">
+                    </span><br>
+                    <span>Air Date: </span>
+                    <span id="epDate">
+                    </span><br>
+                    <span>Episode: </span>
+                    <span id="epString">
+                    </span><br>
+                    <span>Url: </span>
+                    <span id="epUrl">
+                    </span><br>
+                    <span>Created: </span>
+                    <span id="epCreated">
+                    </span><br>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
     </main>
 </body>

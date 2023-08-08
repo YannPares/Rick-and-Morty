@@ -7,7 +7,7 @@ var CharacterStatus;
 })(CharacterStatus || (CharacterStatus = {}));
 var CharacterGener;
 (function (CharacterGener) {
-    CharacterGener[CharacterGener["Famale"] = 0] = "Famale";
+    CharacterGener[CharacterGener["Female"] = 0] = "Female";
     CharacterGener[CharacterGener["Male"] = 1] = "Male";
     CharacterGener[CharacterGener["Genderless"] = 2] = "Genderless";
     CharacterGener[CharacterGener["unknown"] = 3] = "unknown";

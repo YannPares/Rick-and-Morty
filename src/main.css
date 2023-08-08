@@ -1,20 +1,22 @@
 @import url(./reset.css);
 
-.mainTitleImg{
-
-}
-
 .sidebar{
     position: absolute;
     flex-flow: column;
     width: 15%;
+    
+    /* background-color: grey; */
 }
 .card-group{
 
-    margin: 2rem;
+
 }
-.card{
+.charImage{
     height: auto;
     width: auto;
-    margin: 5rem;
+    margin: 1.5rem;
+}
+.menu-btn{
+    position: absolute;
+    vertical-align: middle;
 }

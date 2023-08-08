@@ -11,9 +11,10 @@ const url = 'https://rickandmortyapi.com/api';
 const urlChar = `${url}/character`;
 const urlEp = `${url}/episode`;
 const urlLoc = `${url}/location`;
+// const charNum:number = 10;
 export function getCharacters() {
     return __awaiter(this, void 0, void 0, function* () {
-        const response = yield fetch(urlChar);
+        const response = yield fetch('https://rickandmortyapi.com/api/character/');
         const data = yield response.json();
         return data.results;
     });
