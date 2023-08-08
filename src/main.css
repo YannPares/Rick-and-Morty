@@ -1,13 +1,11 @@
 @import url(./reset.css);
 
 .mainTitleImg{
-    display: flex;
-    
+
 }
 
 .sidebar{
     position: absolute;
-    display: flex;
     flex-flow: column;
     width: 15%;
 }
