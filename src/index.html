@@ -43,8 +43,12 @@ errores un toaster-->
        
     </div>
 
-    <nav class="sidebar text-center" id="EpisodeList">  
+    <nav class="sidebar text-center">  
         <h2>Episodes</h2>
+        <div id="EpisodeList">
+          
+        </div>
+        <button id="NextEP">Next Episodes</button>
     </nav>
 
     <main class="container text-center">
@@ -76,9 +80,6 @@ errores un toaster-->
                     </span><br>
                     <span>SPECIES: </span>
                     <span id="charSpecie"> 
-                    </span><br>
-                    <span>TYPE: </span>
-                    <span id="charType">
                     </span><br>
                     <span>GENDER: </span>
                     <span id="charGender">
@@ -140,6 +141,43 @@ errores un toaster-->
             </div>
           </div>
     </section>
+    <section>
+      <div class="modal fade" id="myModalLoc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header" id="modalHeaderloc">
+              
+              </div>
+              <div id="modalBodyloc">
+                  <span>ID: </span>
+                  <span id="locID">
+                  </span><br>
+                  <span>Name: </span>
+                  <span id="locName">
+                  </span><br>
+                  <span>Type: </span>
+                  <span id="locType">
+                  </span><br>
+                  <span>Dimensions: </span>
+                  <span id="locDim">
+                  </span><br>
+                  <span>Residents: </span>
+                  <span id="locResidents">
+                  </span><br>
+                  <span>Url: </span>
+                  <span id="locUrl">
+                  </span><br>
+                  <span>Created: </span>
+                  <span id="locCreated">
+                  </span><br>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
     </main>
 </body>
 </html>

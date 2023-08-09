@@ -7,9 +7,11 @@
     
     /* background-color: grey; */
 }
-.card-group{
-
-
+.container{
+    width: 70%;
+}
+.mainTitleImg{
+    background-size: cover;
 }
 .charImage{
     height: auto;
@@ -19,4 +21,7 @@
 .menu-btn{
     position: absolute;
     vertical-align: middle;
+}
+.hover:hover{
+    cursor: pointer;
 }

@@ -34,9 +34,8 @@ interface Episodes{
     characters:string[];	
     url:string;
     created:string;
-    }
+}
 
-    
 interface Locations{
     id:number;      //The id of the location.
     name:string;    //The name of the location.
@@ -45,4 +44,4 @@ interface Locations{
     residents:string[];	 //ist of character who have been last seen in the location.
     url:string;	   //Link to the location's own endpoint.
     created:string; //Time at which the location was created in the database.
-    }
+}
