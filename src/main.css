@@ -1,6 +1,9 @@
 @import url(./reset.css);
 
 .sidebar{
+    z-index: 100;
+    padding: 0 4.5rem 0 2.5rem;
+    background-color: grey;
     position: absolute;
     flex-flow: column;
     width: 15%;
@@ -8,10 +11,16 @@
     /* background-color: grey; */
 }
 .container{
-    width: 70%;
+    width: 120vh;
 }
 .mainTitleImg{
     background-size: cover;
+}
+.charTitle{
+    margin-right: 15rem;
+}
+.epTitle{
+    margin-left: 2rem;
 }
 .charImage{
     height: auto;

@@ -44,21 +44,33 @@ errores un toaster-->
     </div>
 
     <nav class="sidebar text-center">  
-        <h2>Episodes</h2>
+        <h2 class="epTitle">Episodes</h2>
+        <br>
         <div id="EpisodeList">
-          
         </div>
-        <button id="NextEP">Next Episodes</button>
+        <button id="nextEP">Next Episodes</button>
     </nav>
 
     <main class="container text-center">
-    <section>
-        <h2>Characters</h2>
+    <section class="characters" id="sectionChar">
+        <h2 class="charTitle">Characters</h2><br><br>
+        <button id="changeToLocations">Locations</button>
         <div class="card-group" id="CharacterList"></div>
-
-        <h2>Locations</h2>
-        <div  id="LocationList"></div>
+        <button id="nextChar">More Characters</button><br>
+        
     </section>
+    <section id="sectionLoc">
+    <div class="rightbar text-center"> 
+      <h2>Locations</h2><br>
+      <button id="changeToCharacters">Characters</button>
+      <div  id="LocationList"></div>
+      <br>
+      <button id="nextLoc">More locations</button><br>
+      
+  </div>
+    </section>
+    
+    
     <section>
         <div class="modal fade" id="myModalChar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">

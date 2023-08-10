@@ -6,11 +6,12 @@ const urlLoc = `${url}/location`
 
 
 export async function getCharacters(): Promise<Characters[]>{
-    let pagina = 1;
 
+    let pagina = 1;
     const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${pagina}`);
     const data = await response.json();
     return data.results;
+    
 }
 
 export async function getEpisodes(): Promise<Episodes[]>{
