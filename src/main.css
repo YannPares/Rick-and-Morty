@@ -15,26 +15,23 @@
     position: absolute;
     flex-flow: column;
     width: 15%;
-    
-    
-    /* background-color: grey; */
 }
-.charImage{
-    color: #A6eee6ff;
-}
-.container{
-    
-    width: 120vh;
-    
-}
-.card-group{
-    
-}
-.mainTitleImg{
-    position:sticky;
-    z-index: -1;
+.locationBlock:hover,
+.charImage:hover,
+.episodeBlock:hover{
+    background-color: #69C8ECFF;
+    cursor: pointer;
+    transition-duration: 1s;
+    scale: 1.2;
 }
 
+#container{
+    justify-content: center;
+}
+.mainTitleImg{
+    position:relative;
+    z-index: -1;
+}
 .epTitle{
     margin-left: 2rem;
 }
@@ -45,9 +42,8 @@
     border: 2px solid black;
     box-shadow:3px 3px 3px 3px #fafd7cff;
     border-radius: 5px;
+    color: #A6eee6ff;
 }
-
-
 #nextEP{
     background-color:rgb(86, 255, 86);
 }

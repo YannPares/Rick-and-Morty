@@ -1,17 +1,3 @@
-<!-- //separar por temporadas con filtro de string S01E01 (extra)
-//listar episodios de 20 en 20 o infitny
-// loalizaciones/ planetas
-//titulo de la pagina
-// sidebar que salgan botones con tempooradas, que sean desplegables
-// main biencvenido a la aplicacion or whatever
-// modal para ver el personaje (extra)
-// modal para ver el episodio
-// modal para ver info del planeta (extra) tiene residente, por lo que vuelves a otro popup de  personaje, y ahi podras volver a planeta y por tanto 
-// a habitante y planeta habi planeta etc
-// idea, si pones personajes, que salgan todos en la main , si le das solo a uno en un ep. o donde sea que sea popup 
-// inner html no, .textContent si, mejor createtextnode
-errores un toaster-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,17 +17,13 @@ errores un toaster-->
 </head>
 
 <body>
-  
-    <header>
+      <header>
       <div class="mainTitleImg">
         <img src="https://github.com/YannPares/Rick-and-Morty/blob/main/src/assets/Rick_and_Morty_title_card_(cropped).png?raw=true" 
         alt="mainTitleImg"
         width="100%">
-     
-    </div>
+         </div>
     </header>
-    
-
     <nav class="sidebar text-center">  
         <h2 class="epTitle">Episodes</h2>
         <br>
@@ -49,14 +31,12 @@ errores un toaster-->
         </div>
         <button class="btn btn-success" id="nextEP">Next Episodes</button><br><br>
     </nav>
-
-    <main class="container text-center">
+    <main class="container text-center" id="container">
     <section class="characters" id="sectionChar">
         <h2 class="charTitle">Characters</h2><br>
         <button class="btn btn-success" id="changeToLocations">Locations</button><br>
         <div class="card-group" id="CharacterList"></div>
-        <button class="btn btn-success" id="nextChar">More Characters</button>
-        
+        <button class="btn btn-success" id="nextChar">More Characters</button><br>
     </section>
     <section id="sectionLoc">
     <div class="rightbar text-center"> 
@@ -64,18 +44,14 @@ errores un toaster-->
       <button class="btn btn-success" id="changeToCharacters">Characters</button><br>
       <div  id="LocationList"></div>
       <br>
-      <button class="btn btn-success" id="nextLoc">More locations</button>
-      
-  </div>
+      <button class="btn btn-success" id="nextLoc">More locations</button><br><br>
+   </div>
     </section>
-    
-    
     <section>
         <div class="modal fade" id="myModalChar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header" id="modalHeaderChar">
-                
                 </div>
                 <div id="modalBodyChar">
                     <span id="charImage">
@@ -123,7 +99,6 @@ errores un toaster-->
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header" id="modalHeaderEp">
-                
                 </div>
                 <div id="modalBodyEp">
                     <span>ID: </span>
@@ -157,7 +132,6 @@ errores un toaster-->
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header" id="modalHeaderloc">
-              
               </div>
               <div id="modalBodyloc">
                   <span>ID: </span>

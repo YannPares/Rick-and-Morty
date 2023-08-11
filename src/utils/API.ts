@@ -28,3 +28,4 @@ export async function getLocations(): Promise<Locations[]>{
     return data.results;
 }
 
+

@@ -29,9 +29,11 @@ Some modification of CSS.
 
 ## Thursday 10th:
 
-I can't find a solution to fetch episodes name inside characters card. I spend my time to put some buttons of pagination to load more Chars, Locations and Episodes.
+I can't find a solution to fetch episodes name inside characters card. I spend my time to put some buttons of pagination to load more Chars, Locations and Episodes. I don't feel confident with my project and unable to emprove it.
 
 ## Friday 11th:
+
+I tried to fetch characters->episodes url and episodes->characters
 
 Working on this daily log, README document and writing a script of how i'll going to explain the project. 
 

@@ -89,6 +89,7 @@ async function episodes (){
         const episodeName = document.createTextNode(episode.name);
         const episodeNum = document.createTextNode(episode.episode);
         episodeBlock.appendChild(episodeBlockTitle);
+        episodeBlock.setAttribute("class", "episodeBlock");
         episodeBlock.addEventListener("click", openEPModal);
         episodeBlockTitle.appendChild(episodeName);
         episodeBlockNum.appendChild(episodeNum);
@@ -124,6 +125,7 @@ async function locations(){
         const locationBlockTitle = document.createElement('h3');
         const locationName = document.createTextNode(location.name);
         locationBlock.addEventListener("click", openLocModal)
+        locationBlock.setAttribute("class", "locationBlock");
         locationBlock.appendChild(locationBlockTitle);
         locationBlockTitle.appendChild(locationName);
         LocationList!.appendChild(locationBlock);
@@ -176,6 +178,7 @@ async function nextEpisodes(){
         const episodeBlockNum = document.createElement('h3');
         const episodeName = document.createTextNode(episode.name);
         const episodeNum = document.createTextNode(episode.episode);
+        episodeBlock.setAttribute("class" , "episodeBlock")
         episodeBlock.appendChild(episodeBlockTitle);
         episodeBlock.addEventListener("click", openEPModal);
         episodeBlockTitle.appendChild(episodeName);
@@ -262,7 +265,7 @@ async function nextCharacters(){
 
 let paginaLoc=2;
 async function nextLocations(){
-    const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${paginaLoc}`);
+    const response = await fetch(`https://rickandmortyapi.com/api/location/?page=${paginaLoc}`);
     const data = await response.json();
     const locations = data.results;
     // return console.log(data.results);
@@ -270,6 +273,7 @@ async function nextLocations(){
         const locationBlock = document.createElement('div');
         const locationBlockTitle = document.createElement('h3');
         const locationName = document.createTextNode(location.name);
+        locationBlock.setAttribute("class", "locationBlock");
         locationBlock.addEventListener("click", openLocModal)
         locationBlock.appendChild(locationBlockTitle);
         locationBlockTitle.appendChild(locationName);
