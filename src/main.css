@@ -1,24 +1,40 @@
 @import url(./reset.css);
 
+.body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
 .sidebar{
     z-index: 100;
     padding: 0 4.5rem 0 2.5rem;
-    background-color: grey;
+    background-color: #69C8ECFF;
+    border-color: 2px solid black;
+    border-radius: 20px;
+    box-shadow:3px 3px 3px 3px black;
     position: absolute;
     flex-flow: column;
     width: 15%;
     
+    
     /* background-color: grey; */
 }
+.charImage{
+    color: #A6eee6ff;
+}
 .container{
+    
     width: 120vh;
+    
+}
+.card-group{
+    
 }
 .mainTitleImg{
-    background-size: cover;
+    position:sticky;
+    z-index: -1;
 }
-.charTitle{
-    margin-right: 15rem;
-}
+
 .epTitle{
     margin-left: 2rem;
 }
@@ -26,11 +42,24 @@
     height: auto;
     width: auto;
     margin: 1.5rem;
+    border: 2px solid black;
+    box-shadow:3px 3px 3px 3px #fafd7cff;
+    border-radius: 5px;
 }
-.menu-btn{
-    position: absolute;
-    vertical-align: middle;
+
+
+#nextEP{
+    background-color:rgb(86, 255, 86);
 }
-.hover:hover{
-    cursor: pointer;
+#changeToLocations,
+#changeToCharacters,
+#nextChar,
+#nextLoc,
+#modalBodyChar,
+#modalFooter,
+#modalHeaderChar{
+    background-color: #69C8ECFF;
+    border: 1px solid black;
 }
+
+

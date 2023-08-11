@@ -31,7 +31,7 @@ interface Episodes{
     name:string;	
     air_date:string;
     episode:string;
-    characters:string[];	
+    characters:Characters;	
     url:string;
     created:string;
 }

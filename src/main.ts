@@ -9,6 +9,7 @@ async function init(){
     characters();
     episodes();
     locations();
+
 }
 
 const changeToLocations = document.querySelector('#changeToLocations') as HTMLButtonElement;
@@ -17,6 +18,7 @@ const sectionChar = document.querySelector('#sectionChar') as HTMLElement;
 const sectionLoc = document.querySelector('#sectionLoc') as HTMLElement;
 changeToLocations.addEventListener("click", showLocations);
 changeToCharacters.addEventListener("click", showCharacters);
+sectionLoc.style.display = "none";
 function showLocations(){
     sectionChar.style.display = "none";
     sectionLoc.style.display = "block";
@@ -26,11 +28,10 @@ function showCharacters(){
     sectionLoc.style.display = "none";
 }
 
-
-
 async function characters(){
 const characters = await getCharacters();
 characters.forEach((char) => {
+    
     const characterCard = document.createElement('div');
     const characterCardTitle = document.createElement('h3');
     const characterCardTitleTxt = document.createTextNode(char.name);
@@ -42,6 +43,7 @@ characters.forEach((char) => {
     characterCard.addEventListener("click", openCharModal);
     characterCard.appendChild(characterCardTitle);
     characterCard.appendChild(characterImg);
+    
     characterList!.appendChild(characterCard);
     function openCharModal(this: HTMLImageElement){
         // this.setAttribute("class", "btn btn-primary");
@@ -71,7 +73,7 @@ characters.forEach((char) => {
             characterImg.src = char.image;
             characterImg.alt = `${char.name} Image`;
             charImage?.replaceChildren(characterImg , characterImg);
-            charEP!.textContent = `${char.episode.name}`;
+            charEP!.textContent = `${char.episode}`;
             charUrl!.textContent = `${char.url}`;
             charCreate!.textContent = `${char.created}`;
     }

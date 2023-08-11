@@ -31,41 +31,40 @@ errores un toaster-->
 </head>
 
 <body>
+  
     <header>
-       
-    </header>
-    <div class="mainTitleImg">
+      <div class="mainTitleImg">
         <img src="https://github.com/YannPares/Rick-and-Morty/blob/main/src/assets/Rick_and_Morty_title_card_(cropped).png?raw=true" 
         alt="mainTitleImg"
         width="100%">
-        <!-- <button class="menu-btn btn btn-secondary "><h2>EPISODES</h2></button>
-        <button class="menu-btn btn btn-secondary "><h2>CHARACTERS</h2></button> -->
-       
+     
     </div>
+    </header>
+    
 
     <nav class="sidebar text-center">  
         <h2 class="epTitle">Episodes</h2>
         <br>
         <div id="EpisodeList">
         </div>
-        <button id="nextEP">Next Episodes</button>
+        <button class="btn btn-success" id="nextEP">Next Episodes</button><br><br>
     </nav>
 
     <main class="container text-center">
     <section class="characters" id="sectionChar">
-        <h2 class="charTitle">Characters</h2><br><br>
-        <button id="changeToLocations">Locations</button>
+        <h2 class="charTitle">Characters</h2><br>
+        <button class="btn btn-success" id="changeToLocations">Locations</button><br>
         <div class="card-group" id="CharacterList"></div>
-        <button id="nextChar">More Characters</button><br>
+        <button class="btn btn-success" id="nextChar">More Characters</button>
         
     </section>
     <section id="sectionLoc">
     <div class="rightbar text-center"> 
       <h2>Locations</h2><br>
-      <button id="changeToCharacters">Characters</button>
+      <button class="btn btn-success" id="changeToCharacters">Characters</button><br>
       <div  id="LocationList"></div>
       <br>
-      <button id="nextLoc">More locations</button><br>
+      <button class="btn btn-success" id="nextLoc">More locations</button>
       
   </div>
     </section>
@@ -112,8 +111,8 @@ errores un toaster-->
                     <span id="charCreate">
                     </span><br>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <div class="modal-footer" id="modalFooter">
+                  <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
@@ -147,7 +146,7 @@ errores un toaster-->
                     </span><br>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
@@ -184,7 +183,7 @@ errores un toaster-->
                   </span><br>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>

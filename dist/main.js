@@ -25,6 +25,7 @@ const sectionChar = document.querySelector('#sectionChar');
 const sectionLoc = document.querySelector('#sectionLoc');
 changeToLocations.addEventListener("click", showLocations);
 changeToCharacters.addEventListener("click", showCharacters);
+sectionLoc.style.display = "none";
 function showLocations() {
     sectionChar.style.display = "none";
     sectionLoc.style.display = "block";
@@ -77,7 +78,7 @@ function characters() {
                 characterImg.src = char.image;
                 characterImg.alt = `${char.name} Image`;
                 charImage === null || charImage === void 0 ? void 0 : charImage.replaceChildren(characterImg, characterImg);
-                charEP.textContent = `${char.episode.name}`;
+                charEP.textContent = `${char.episode}`;
                 charUrl.textContent = `${char.url}`;
                 charCreate.textContent = `${char.created}`;
             }
