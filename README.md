@@ -1,6 +1,6 @@
-`#HTML5` `#CSS``#Bootstrap` `#js` `#dom` `#Javascript` `#nodeJS` `#Typescript` 
+`#HTML5` `#CSS` `#Bootstrap` `#js` `#dom` `#Javascript` `#nodeJS` `#Typescript` 
 
-#Rick and morty Api 
+# Rick and morty Api 
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ $ git clone https://github.com/YannPares/Rick-and-Morty.git
 
 ## Specifications
 
-You will have to see the project with VScode live server or similar to avoid CORS or CORB errors.
+You will have to open the project with VScode live server or similar to avoid CORS or CORB errors.
 In addition you have to install bootstrap via npm or include it via CDN link.
 
 ### npm install:
