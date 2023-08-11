@@ -1,4 +1,4 @@
-`#HTML5` `#CSS` `#Bootstrap` `#js` `#dom` `#Javascript` `#nodeJS` `#Typescript` 
+`#API` `#HTML5` `#CSS` `#Bootstrap` `#js` `#dom` `#Javascript` `#nodeJS` `#Typescript` 
 
 # Rick and morty Api 
 
